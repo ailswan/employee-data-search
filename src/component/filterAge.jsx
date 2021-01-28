@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/filters.css';
-import searchDepartmentAge from '../data/searchDepartmentAge.js';
+// import searchDepartmentAge from '../data/searchDepartmentAge.js';
+import searchDepartmentAge from '../data/apiDepartmentAge.js';
 
 class DropdownAge extends React.Component {
   constructor(props) {

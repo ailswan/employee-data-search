@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/search.css';
-import searchData from '../data/searchData.js';
-
+// import searchData from '../data/searchData.js';
+import searchName from '../data/api.js';
 
 class Search extends React.Component {
   constructor(props) {
@@ -18,7 +18,8 @@ class Search extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     //console.log(this.state.name + ' is submited!');
-    searchData(this.state.name, this.props.onSearch);
+    // searchData(this.state.name, this.props.onSearch);
+    searchName(this.state.name, this.props.onSearch);
   }
 
   render() {

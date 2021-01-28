@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   changeResult(e,department,age) {
-    console.log(e);
+    //console.log(e);
     this.setState({employees:e,department:department,age:age});
   }
 

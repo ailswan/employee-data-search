@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/filters.css';
-import searchDepartmentAge from '../data/searchDepartmentAge.js';
+// import searchDepartmentAge from '../data/searchDepartmentAge.js';
+import searchDepartmentAge from '../data/apiDepartmentAge.js';
 
 class DropdownDepart extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class DropdownDepart extends React.Component {
    
   handleChange(e) {
   this.setState({selectValue:e.target.value});
-  console.log(this.props.currentAge);
+  // console.log(this.props.currentAge);
   searchDepartmentAge(e.target.value,this.props.currentAge,this.props.onSearch);
   }
 

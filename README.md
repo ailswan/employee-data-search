@@ -1,3 +1,10 @@
+This web application can be used to search the information of employee in the system.
+
+This application includes 3 basic functions:
+
++ Displays the employee data
++ Allows a user to search for an employee by name + Allows a user to filter the data by both department and age
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

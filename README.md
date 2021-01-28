@@ -6,6 +6,7 @@ This application includes 3 basic functions:
 + Allows a user to search for an employee by name 
 + Allows a user to filter the data by both department and age
 
+![image](http://github.com/ailswan/employee-data-search/raw/master/readme-picture/employee-search-system-mainpage.png)
 ![image](http://github.com/ailswan/employee-data-search/raw/master/readme-picture/employee-search-system.gif)
 
 

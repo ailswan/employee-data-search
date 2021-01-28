@@ -1,6 +1,6 @@
 import employeeData from './employeeData.js';
 
-var searchDepartmentAge = (department,age, callback) => {
+var searchDepartmentAge = (department='All',age='All', callback) => {
   let result = [];
   if(department === 'All' && age === 'All') {
     result = employeeData;

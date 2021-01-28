@@ -17,7 +17,7 @@ class DropdownDepart extends React.Component {
   }
 
   render() {
-    var message='Age Filter: You selected '+this.state.selectValue;
+    var message='Department Filter: You selected '+this.state.selectValue;
     return (
       <div>
       <select 

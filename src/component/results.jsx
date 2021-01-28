@@ -1,16 +1,12 @@
 import React from 'react';
 import '../styles/result.css';
 import Resultname from '../component/resultname.jsx';
-
+ 
 
 class Results extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      value: ''
-    };
-
+    this.state = {employees: this.props.searchResult};
   }
 
   render() {
@@ -19,14 +15,19 @@ class Results extends React.Component {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Department</th>
             <th scope="col">Age</th>
           </tr>
         </thead>
         <tbody>
-          <Resultname />
+       
+          {this.props.searchResult.map(employee => {
+            return (
+             <Resultname key={employee.name} employee={employee} />
+            );
+          })}
+
         </tbody>
       </table>
       </div>

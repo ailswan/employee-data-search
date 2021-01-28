@@ -1,25 +1,25 @@
 import React from 'react';
 import '../styles/search.css';
+import searchData from '../data/searchData.js';
 
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ''
+      name: '',
     };
   }
 
   handleSearch(e){
-    this.setState({name:''});
+    this.setState({name:e.target.value});
   }
-
 
   handleSubmit(e){
     e.preventDefault();
-    // searchData(this.state.name, this.props.onSearch);
+    //console.log(this.state.name + ' is submited!');
+    searchData(this.state.name, this.props.onSearch);
   }
-
 
   render() {
     return (
@@ -27,7 +27,6 @@ class Search extends React.Component {
         <input
         type='text' 
         className='search-bar' 
-        value={this.state.name}
         placeholder='Employee Name'
         onChange={this.handleSearch.bind(this)}
         />

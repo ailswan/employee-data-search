@@ -2,7 +2,8 @@ import React from 'react';
 import employeeData from './data/employeeData.js';
 import Search from '../src/component/searchbar.jsx';
 import Results from '../src/component/results.jsx';
-import Dropdown from '../src/component/filters.jsx';
+import DropdownDepart from './component/filterDepartment.jsx';
+import DropdownAge from './component/filterAge.jsx';
 
 import './styles/App.css';
  
@@ -10,18 +11,16 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      employee:{
-        name:'',
-        department:'',
-        age:''
-      },
-      employees: employeeData};
+      employees: employeeData,
+      department:'All',
+      age:'All'
+    };
   }
 
-  changeResult(e) {
-    this.setState({employee:e});
+  changeResult(e,department,age) {
+    console.log(e);
+    this.setState({employees:e,department:department,age:age});
   }
-
 
   render() {
     return (
@@ -30,8 +29,9 @@ class App extends React.Component {
           <header className="App-header">
             <h2> Employee Information System</h2>
             <Search onSearch={this.changeResult.bind(this)}/>
-            <Dropdown />
-            <Results />
+            <DropdownDepart onSearch={this.changeResult.bind(this)} currentAge={this.state.age}/>
+            <DropdownAge  onSearch={this.changeResult.bind(this)} currentDepartment={this.state.department}/>
+            <Results searchResult={this.state.employees}/>
             
           </header>
         </div>

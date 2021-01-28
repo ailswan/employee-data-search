@@ -7,7 +7,7 @@ class Resultname extends React.Component {
     super(props);
 
     this.state = {
-      value: ''
+      name:'',
     };
 
   }
@@ -15,11 +15,11 @@ class Resultname extends React.Component {
   render() {
     return (
         <tr>
-          <th scope="row">1</th>
-          <td>Anne Hathaway</td>
-          <td>Film</td>
-          <td>38</td>
+          <td>{this.props.employee.name}</td>
+          <td>{this.props.employee.department}</td>
+          <td>{this.props.employee.age}</td>
         </tr>
+        
     );
   };
 }

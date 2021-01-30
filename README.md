@@ -15,6 +15,9 @@ This application includes 3 basic functions:
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm install`
+
+install the npm
 
 ### `node server.js`
 
